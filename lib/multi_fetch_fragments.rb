@@ -2,7 +2,7 @@ module MultiFetchFragments
   extend ActiveSupport::Concern
 
   included do
-    alias_method_chain :render_collection, :multi_fetch_cache
+    alias_method :render_collection, :multi_fetch_cache
   end
 
   private
